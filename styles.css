@@ -7,26 +7,32 @@
 }
 
 :root {
-  --dark-grey: #1b1b32;
+  --dark-grey: #fec8b4;
   --light-grey: #f5f6f7;
   --black: #000;
   --white: #fff;
   --grey: #3b3b4f;
-  --golden-yellow: #fecc4c;
-  --yellow: #ffcc4c;
-  --gold: #feac32;
-  --orange: #ffac33;
-  --dark-orange: #f89808;
+  --golden-yellow: #4d14ad;
+  --yellow: #4d14ad;
+  --gold: #4d14ad;
+  --orange: #4d14ad;
+  --dark-orange: #7634e8;
 }
 
 body {
   background-color: var(--dark-grey);
 }
 
-.title {
+/* .title {
   color: var(--light-grey);
   text-align: center;
   margin: 25px 0;
+} */
+.logo-img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 #dessert-card-container {
@@ -34,6 +40,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  
 }
 
 .dessert-card {
@@ -47,6 +54,23 @@ body {
 .dessert-price {
   font-size: 1.2rem;
 }
+.dessert-card {
+    background-color: var(--light-grey);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; /* Increased border-radius */
+    margin: 20px;
+    transition: box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* Added transitions */
+  }
+  
+  .dessert-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; /* Adjusted border-radius on hover */
+  }
+  
+  .dessert-price {
+    font-size: 1.6rem; /* Increased font size */
+  }
 
 .btn {
   display: block;
@@ -64,11 +88,26 @@ body {
 }
 
 #cart-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px; /* Adjusted padding */
+    border: none;
+    border-radius: 8px; /* Added border-radius */
+    background: linear-gradient(var(--golden-yellow), var(--orange)); /* Gradient background */
+    color: var(--dark-grey);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  #cart-btn:hover {
+    background: linear-gradient(var(--yellow), var(--dark-orange));
+  }
+  
+#cart-btn{
+    margin-top: 30px;
+    margin-right: 30px;
 }
-
 .add-to-cart-btn {
   margin: 30px auto 10px;
 }
